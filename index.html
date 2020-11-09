@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UIB custom form inputs</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <!--
+        GET: send data as query params to the URL specified in the action attribute
+    -->
+    <form action="https://url-to-server.com" method="GET">
+        <label for="first-name">Your name</label>
+        <input type="text" id="first-name" name="first-name">
+
+        <label>
+            Last name
+            <input type="text" name="last-name">
+        </label>
+
+        <button type="reset">Reset</button>
+        <button>Submit form</button>
+    </form>
+
+
+
+</body>
+
+</html>
