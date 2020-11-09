@@ -54,11 +54,13 @@ button {
 }
 
 /* Custom checkbox */
+/* Hide the original inout fiel */
 [type="checkbox"],
 .form-checkbox-input {
     position: absolute;
-    /* left: -999px; */
-    visibility: hidden;
+    left: -999px;
+    opacity: 0;
+    /* We cannot use visibility:hidden here because then we cannot interact with the checkbox via the keyboard */
 }
 
 .form-checkbox-label {
@@ -90,6 +92,10 @@ button {
     border-radius: 50%;
     background-color: #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-checkbox-input:focus + .form-checkbox-label {
+    border: 1px solid red;
 }
 
 /* Selected state */
