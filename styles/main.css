@@ -1,0 +1,104 @@
+.signup-form {
+    background-color: white;
+    padding: 30px;
+}
+
+.form-input {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.form-input-label {
+    display: block;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-input-field {
+    padding: 8px 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+}
+
+/* 
+Element is focused, 
+the user is currently in this field
+*/
+.form-input-field:focus {
+    background-color: #f3f3f3;
+    outline: 2px solid lightblue;
+    border: 1px solid #fff;
+}
+
+.form-buttons-container {
+    text-align: right;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.form-button {
+    padding: 8px 16px;
+    background-color: hotpink;
+    color: white;
+}
+
+.form-button.form-button-secondary {
+    background-color: white;
+    color: hotpink;
+}
+
+/* Custom checkbox */
+[type="checkbox"],
+.form-checkbox-input {
+    position: absolute;
+    /* left: -999px; */
+    visibility: hidden;
+}
+
+.form-checkbox-label {
+    position: relative;
+    padding-left: 70px;
+}
+
+.form-checkbox-label::before,
+.form-checkbox-label::after {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    content: '';
+}
+
+.form-checkbox-label::before {
+    width: 50px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #eee;
+    
+}
+
+.form-checkbox-label::after {
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Selected state */
+.form-checkbox-input:checked + .form-checkbox-label::after {
+    left: 42px;
+    background-color: hotpink;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.571);
+}
+
+.form-checkbox-input:checked + .form-checkbox-label::before {
+    background-color: mistyrose;
+}

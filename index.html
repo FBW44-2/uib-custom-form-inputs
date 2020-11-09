@@ -13,24 +13,51 @@
 
 <body>
 
-    <!--
-        GET: send data as query params to the URL specified in the action attribute
-    -->
-    <form action="https://url-to-server.com" method="GET">
-        <label for="first-name">Your name</label>
-        <input type="text" id="first-name" name="first-name">
+    <section class="section-bg-pink">
+        <div class="content-container">
+            <!--
+                GET: send data as query params to the URL specified in the action attribute
+                method="GET" is the default
+            -->
+            <form action="https://url-to-server.com" class="signup-form">
+                <!-- 1. Linking the label and input via the for attribute and the id -->
+                <div class="form-input">
+                    <label for="first-name" class="form-input-label">
+                        First name
+                    </label>
+                    <input type="text" id="first-name" name="first-name" class="form-input-field">
+                </div>
 
-        <label>
-            Last name
-            <input type="text" name="last-name">
-        </label>
+                <!-- 2. Linking the label and input by wrapping the input in label -->
+                <label class="form-input">
+                    <span class="form-input-label">
+                        Last name
+                    </span>
+                    <input type="text" name="last-name" class="form-input-field">
+                </label>
 
-        <button type="reset">Reset</button>
-        <button>Submit form</button>
-    </form>
+                <!-- Custom checkbox -->
+                <label class="form-checkbox">
+                    <input type="checkbox" name="terms" class="form-checkbox-input" />
+
+                    <span class="form-checkbox-label">
+                        Do you agree to the terms?
+                    </span>
+                </label>
 
 
+                <div class="form-buttons-container">
+                    <button type="reset" class="form-button form-button-secondary">
+                        Reset
+                    </button>
 
+                    <button class="form-button">
+                        Submit form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
